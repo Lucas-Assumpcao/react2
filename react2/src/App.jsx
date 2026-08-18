@@ -1,16 +1,24 @@
 
 import './App.css';
-import minhaFoto from './assets/hero.png';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Sobre from './Sobre';
 
 function App() {
   return (
-    <div>
-    <h1>Boa noite </h1>
-    <p>Soma: {2+2}</p>
-    <img src={minhaFoto} alt="foto" width={150} height={150 } />
-    <img src="/favicon.svg" alt="site" width={150} height={150} />
+    <>
+      <BrowserRouter>
+      
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/sobre' element={<Sobre/>}/>
 
-    </div>
+        </Routes>
+      </BrowserRouter>
+    
+    
+    
+    </>
     );
 }
 
